@@ -14,6 +14,7 @@ export const CryptoCurrency = () => {
   const [cryptoData, setCryptoData] = useState();
 
   const [isPending, setIsPending] = useState(false);
+  const [isPendingForHistoryData, setIsPendingForHistoryData] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -32,13 +33,17 @@ export const CryptoCurrency = () => {
         currentCryptoCurrency={currentCryptoCurrency}
         setCurrentCryptoCurrency={setCurrentCryptoCurrency}
         isPending={isPending}
+        isPendingForHistoryData={isPendingForHistoryData}
       />
       {isPending ? (
         <h2>Loading...</h2>
       ) : (
         <>
           <MarketData cryptoData={cryptoData} />
-          <ChartingData currentCryptoCurrency={currentCryptoCurrency} />
+          <ChartingData
+            currentCryptoCurrency={currentCryptoCurrency}
+            setIsPendingForHistoryData={setIsPendingForHistoryData}
+          />
         </>
       )}
     </section>

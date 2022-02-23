@@ -15,6 +15,7 @@ export const CurrencySelector = ({
   currentCryptoCurrency,
   setCurrentCryptoCurrency,
   isPending,
+  isPendingForHistoryData,
 }) => {
   const socket = useRef(null);
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -50,7 +51,7 @@ export const CurrencySelector = ({
       <button
         className="CurrencySelector__subscribe-btn"
         onClick={onSubscribe}
-        disabled={isPending}
+        disabled={isPending || isPendingForHistoryData}
       >
         {isSubscribed ? 'Unsubscribe' : 'Subscribe'}
       </button>
