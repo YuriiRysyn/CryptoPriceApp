@@ -22,7 +22,7 @@ export const CurrencySelector = ({
 
   const onSubscribe = () => {
     if (!isSubscribed) {
-      const url = 'ws://ws-sandbox.coinapi.io/v1/';
+      const url = 'wss://ws-sandbox.coinapi.io/v1/';
       socket.current = new WebSocket(url);
 
       subscribeForCurrencyData(
