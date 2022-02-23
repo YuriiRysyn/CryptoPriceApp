@@ -12,7 +12,7 @@ export const CurrencyPicker = ({
   const handleChange = event => {
     setCurrentCryptoCurrency(event.target.value);
   };
-// also can be added one more select to select the currency to be counted
+  // also can be added one more select to select other currency to be counted, if we want not only compare to USD
 
   return (
     <section className="CurrencyPicker">

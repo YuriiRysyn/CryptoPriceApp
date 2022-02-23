@@ -44,10 +44,7 @@ export const CurrencySelector = ({
           listOfAssets={listOfAssets}
         />
       ) : (
-        <DefaultCurrency
-          currentCryptoCurrency={currentCryptoCurrency}
-          setCurrentCryptoCurrency={setCurrentCryptoCurrency}
-        />
+        <DefaultCurrency currentCryptoCurrency={currentCryptoCurrency} />
       )}
 
       <button className="CurrencySelector__subscribe-btn" onClick={onSubscribe}>
