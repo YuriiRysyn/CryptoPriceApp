@@ -11,6 +11,7 @@ export const getListOfAssets = async () => {
     });
 
     const list = await res.json();
+    console.log(list);
 
     const filteredList = list
       .filter(asset => asset.type_is_crypto === 1)

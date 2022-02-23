@@ -3,15 +3,14 @@ import React from 'react';
 import './MarketData.scss';
 
 export const MarketData = ({ cryptoData }) => {
-  const name = (cryptoData && cryptoData.asset_id_base) || '-';
-  const quote = (cryptoData && cryptoData.asset_id_quote) || '-';
+  const name = cryptoData ? cryptoData.asset_id_base : '-';
+  const quote = cryptoData ? cryptoData.asset_id_quote : '-';
   const symbol = `${name}/${quote}`;
 
-  const price = (cryptoData && '$' + cryptoData.rate) || '-';
-  const time = (cryptoData && new Date(cryptoData.time)) || '-';
-  const data =
-    cryptoData &&
-    +time.getDate() +
+  const price = cryptoData ? '$' + cryptoData.rate : '-';
+  const time = cryptoData ? new Date(cryptoData.time) : '-';
+  const data = cryptoData
+    ? +time.getDate() +
       '/' +
       (time.getMonth() + 1) +
       '/' +
@@ -21,7 +20,9 @@ export const MarketData = ({ cryptoData }) => {
       ':' +
       time.getMinutes() +
       ':' +
-      time.getSeconds();
+      time.getSeconds()
+    : '-';
+
   return (
     <section className="MarketData">
       <h2 className="MarketData__title">Market data:</h2>

@@ -3,15 +3,14 @@ import ReactApexChart from 'react-apexcharts';
 
 import './HistoryGraph.scss';
 
-export const HistoryGraph = ({ data = [] }) => {
-  const prices = data.map(oneDayData => oneDayData.rate_close);
-  const dates = data.map(oneDayData => {
+export const HistoryGraph = ({ data }) => {
+  console.log(data);
+  const prices = data && data.map(oneDayData => oneDayData.rate_close);
+  const dates = data &&  data.map(oneDayData => {
     const date = new Date(oneDayData.time_close).getDate();
 
     return date;
   });
-
-  console.log(dates);
 
   const config = {
     series: [

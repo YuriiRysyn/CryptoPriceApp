@@ -11,10 +11,10 @@ import { DefaultCurrency } from './DefaultCurrency/DefaultCurrency';
 
 export const CurrencySelector = ({
   listOfAssets,
-  cryptoData,
   setCryptoData,
   currentCryptoCurrency,
   setCurrentCryptoCurrency,
+  isPending,
 }) => {
   const socket = useRef(null);
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -37,7 +37,7 @@ export const CurrencySelector = ({
 
   return (
     <section className="CurrencySelector">
-      {listOfAssets && !isSubscribed ? (
+      {listOfAssets && listOfAssets.length && !isSubscribed ? (
         <CurrencyPicker
           currentCryptoCurrency={currentCryptoCurrency}
           setCurrentCryptoCurrency={setCurrentCryptoCurrency}
@@ -47,7 +47,11 @@ export const CurrencySelector = ({
         <DefaultCurrency currentCryptoCurrency={currentCryptoCurrency} />
       )}
 
-      <button className="CurrencySelector__subscribe-btn" onClick={onSubscribe}>
+      <button
+        className="CurrencySelector__subscribe-btn"
+        onClick={onSubscribe}
+        disabled={isPending}
+      >
         {isSubscribed ? 'Unsubscribe' : 'Subscribe'}
       </button>
     </section>

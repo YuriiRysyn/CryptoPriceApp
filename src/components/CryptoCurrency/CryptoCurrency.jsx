@@ -9,14 +9,17 @@ import { getListOfAssets } from '../../api/getListOfAssets';
 
 export const CryptoCurrency = () => {
   const [currentCryptoCurrency, setCurrentCryptoCurrency] = useState('BTC');
-  const [listOfAssets, setListOfAssets] = useState([]);
+  const [listOfAssets, setListOfAssets] = useState();
 
-  const [cryptoData, setCryptoData] = useState(null);
+  const [cryptoData, setCryptoData] = useState();
+
+  const [isPending, setIsPending] = useState(false);
 
   useEffect(() => {
     (async () => {
+      setIsPending(true);
       const data = await getListOfAssets();
-
+      setIsPending(false);
       setListOfAssets(data);
     })();
   }, []);
@@ -25,14 +28,19 @@ export const CryptoCurrency = () => {
     <section className="CryptoCurrency">
       <CurrencySelector
         listOfAssets={listOfAssets}
-        cryptoData={cryptoData}
         setCryptoData={setCryptoData}
         currentCryptoCurrency={currentCryptoCurrency}
         setCurrentCryptoCurrency={setCurrentCryptoCurrency}
+        isPending={isPending}
       />
-
-      <MarketData cryptoData={cryptoData} />
-      <ChartingData currentCryptoCurrency={currentCryptoCurrency} />
+      {isPending ? (
+        <h2>Loading...</h2>
+      ) : (
+        <>
+          <MarketData cryptoData={cryptoData} />
+          <ChartingData currentCryptoCurrency={currentCryptoCurrency} />
+        </>
+      )}
     </section>
   );
 };
