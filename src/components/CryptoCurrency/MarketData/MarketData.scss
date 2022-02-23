@@ -1,0 +1,28 @@
+.MarketData {
+  margin: 10px 0;
+  padding: 10px 0;
+
+  &__crypto-data {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 20px;
+
+    &-type {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 20px;
+
+      &-title {
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+
+      &-value {
+        font-size: 16px;
+      }
+    }
+  }
+}
