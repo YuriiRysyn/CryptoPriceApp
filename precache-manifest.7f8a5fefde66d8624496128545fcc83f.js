@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "327a29a22ebb658da5305f33d90c614f",
+    "revision": "91804092716caa01c2a0751947c4679d",
     "url": "/CryptoPriceApp/index.html"
   },
   {
-    "revision": "dcca343750d4e72be0df",
+    "revision": "98b11e9827fa577e27ae",
     "url": "/CryptoPriceApp/static/css/main.1f4aa070.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CryptoPriceApp/static/js/2.58422421.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dcca343750d4e72be0df",
-    "url": "/CryptoPriceApp/static/js/main.a594a4e8.chunk.js"
+    "revision": "98b11e9827fa577e27ae",
+    "url": "/CryptoPriceApp/static/js/main.5fca6369.chunk.js"
   },
   {
     "revision": "0e377666a3db54aa0767",

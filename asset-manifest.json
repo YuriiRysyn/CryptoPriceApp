@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/CryptoPriceApp/static/css/main.1f4aa070.chunk.css",
-    "main.js": "/CryptoPriceApp/static/js/main.a594a4e8.chunk.js",
-    "main.js.map": "/CryptoPriceApp/static/js/main.a594a4e8.chunk.js.map",
+    "main.js": "/CryptoPriceApp/static/js/main.5fca6369.chunk.js",
+    "main.js.map": "/CryptoPriceApp/static/js/main.5fca6369.chunk.js.map",
     "runtime-main.js": "/CryptoPriceApp/static/js/runtime-main.a99ab7e9.js",
     "runtime-main.js.map": "/CryptoPriceApp/static/js/runtime-main.a99ab7e9.js.map",
     "static/js/2.58422421.chunk.js": "/CryptoPriceApp/static/js/2.58422421.chunk.js",
     "static/js/2.58422421.chunk.js.map": "/CryptoPriceApp/static/js/2.58422421.chunk.js.map",
     "index.html": "/CryptoPriceApp/index.html",
-    "precache-manifest.5a01eca2c184e838e0043fb73a6c9e1f.js": "/CryptoPriceApp/precache-manifest.5a01eca2c184e838e0043fb73a6c9e1f.js",
+    "precache-manifest.7f8a5fefde66d8624496128545fcc83f.js": "/CryptoPriceApp/precache-manifest.7f8a5fefde66d8624496128545fcc83f.js",
     "service-worker.js": "/CryptoPriceApp/service-worker.js",
     "static/css/main.1f4aa070.chunk.css.map": "/CryptoPriceApp/static/css/main.1f4aa070.chunk.css.map",
     "static/js/2.58422421.chunk.js.LICENSE.txt": "/CryptoPriceApp/static/js/2.58422421.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a99ab7e9.js",
     "static/js/2.58422421.chunk.js",
     "static/css/main.1f4aa070.chunk.css",
-    "static/js/main.a594a4e8.chunk.js"
+    "static/js/main.5fca6369.chunk.js"
   ]
 }
