@@ -4,7 +4,6 @@ import ReactApexChart from 'react-apexcharts';
 import './HistoryGraph.scss';
 
 export const HistoryGraph = ({ data }) => {
-  console.log(data);
   const prices = data && data.map(oneDayData => oneDayData.rate_close);
   const dates = data &&  data.map(oneDayData => {
     const date = new Date(oneDayData.time_close).getDate();
